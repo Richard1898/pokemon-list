@@ -21,27 +21,46 @@ while True:
     print("3. Sort by Z-A")
     print("4. Search by name")
     print("5. Search by length of name")
-    print("6. Exit")
+    print("6 paginaciju")
+    print("7. Exit")
 
-    choice = input("Enter your choice (1-6): ")
+    choice = input("Enter your choice (1-7): ")
 
     if choice == '1':
-        # https://www.w3schools.com/python/python_lists_access.asp
+        x = input("Numuri ieraksti:")
+        print(pokemons[int(x)-1])
         pass
     elif choice == '2':
-        # https://www.w3schools.com/python/python_lists_sort.asp
+        pokemons.sort()
+        print(pokemons)
         pass
     elif choice == '3':
-        # https://www.w3schools.com/python/python_lists_sort.asp
+        pokemons.sort(reverse = True)
+        print(pokemons)
         pass
     elif choice == '4':
-        # https://www.w3schools.com/python/python_lists_comprehension.asp
-        # https://www.w3schools.com/python/ref_string_startswith.asp
+        name = input("Ko meklejat: ")
+        newlist = [x for x in pokemons if name in x]
+        print(newlist)
         pass
     elif choice == '5':
-        # https://www.w3schools.com/python/python_lists_comprehension.asp
-        pass
+        name = input("Uzraksti length")
+        newlist = [x for x in pokemons if int(name) == len(x)]
+        print(newlist)
     elif choice == '6':
+        print(pokemons[int(0)-1])
+        print(pokemons[int(0)])
+        print(pokemons[int(0)+1])
+        print(pokemons[int(0)+2])
+        print(pokemons[int(0)+3])
+        print(pokemons[int(0)+4])
+        print(pokemons[int(0)+5])
+        print(pokemons[int(0)+6])
+        print(pokemons[int(0)+7])
+        print(pokemons[int(0)+8])
+        x = input("Uzrakstiet n vai q")
+        pass
+    elif choice == '7':
         print("Exiting")
         break
     else:
